@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* reset css */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none
+}
+
+/* background img */
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
