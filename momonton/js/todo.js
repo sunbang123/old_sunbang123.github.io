@@ -4,7 +4,11 @@ const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
 function paintToDo(newTodo){
-    console.log("입력값: ", newTodo);
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    li.appendChild(span);
+    span.innerText = newTodo;
+    toDoList.appendChild(li);
 }
 
 function onToDoSubmit(event){
