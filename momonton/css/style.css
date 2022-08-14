@@ -56,7 +56,7 @@ h1#clock {
     text-shadow: 0 0 5px #00000047;
 }
 
-#todo-form input {
+#name-form input, #email-form input, #todo-form input {
     background: transparent;
     outline: transparent;
     border: transparent;
@@ -69,13 +69,14 @@ h1#clock {
     text-shadow: 0 0 5px #00000047;
 }
 
+
 #todo-form input::placeholder {
     color: white;
     text-shadow: 0 0 5px #00000047;
 }
 
 ul#todo-list {
-    max-height: 20vw;
+    max-height: 15vw;
     color: white;
     text-shadow: 0 0 5px #00000047;
     font-size: 2vw;
@@ -101,4 +102,8 @@ ul#todo-list li {
 
 ul#todo-list li p {
     width: 100%;
+}
+
+form#logout-form {
+    padding: 2vw;
 }

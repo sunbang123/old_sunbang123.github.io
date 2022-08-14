@@ -2,6 +2,7 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
             // document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
+const gridBox = document.querySelector("div.grid-box");
 
 const TODOS_KEY = "todos";
 
@@ -16,6 +17,10 @@ function deleteToDo(event){
     li.remove();
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
+    if(toDoList.childElementCount === 0){
+        toDoList.style.display = "none";
+        gridBox.style.height = "60vh";
+    }
 }
 
 function paintToDo(newTodo){
@@ -29,6 +34,8 @@ function paintToDo(newTodo){
     li.appendChild(p);
     li.appendChild(button);
     toDoList.appendChild(li);
+    toDoList.style.display = "block";
+    gridBox.style.height = "100vh";
 }
 
 function onToDoSubmit(event){
@@ -58,4 +65,12 @@ if(savedToDos !== null){
 if(savedUser !== null){
     toDoForm.classList.remove(HIDDEN_CLASSNAME);
     toDoList.classList.remove(HIDDEN_CLASSNAME);
+}
+
+if(toDoList.childElementCount === 0){
+    toDoList.style.display = "none";
+    gridBox.style.height = "60vh";
+} else {
+    toDoList.style.display = "block";
+    gridBox.style.height = "100vh";
 }
