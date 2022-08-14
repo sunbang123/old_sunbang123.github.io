@@ -3,11 +3,31 @@ const toDoInput = toDoForm.querySelector("input");
             // document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
+const TODOS_KEY = "todos";
+
+let toDos = [];
+
+function saveToDos(){
+    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); // array 형태로 텍스트 저장
+}
+
+function deleteToDo(event){
+    const li = event.target.parentElement;
+    li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
+}
+
 function paintToDo(newTodo){
     const li = document.createElement("li");
+    li.id = newTodo.id;
     const span = document.createElement("span");
+    span.innerText = newTodo.text;
+    const button = document.createElement("button");
+    button.innerText = "❌";
+    button.addEventListener("click", deleteToDo)
     li.appendChild(span);
-    span.innerText = newTodo;
+    li.appendChild(button);
     toDoList.appendChild(li);
 }
 
@@ -16,7 +36,22 @@ function onToDoSubmit(event){
     event.preventDefault();
     const newTodo = toDoInput.value;
     toDoInput.value = "";
-    paintToDo(newTodo);
+    const newTodoObj = {
+        text: newTodo,
+        id: Date.now(),
+    }
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
+    saveToDos(); // 로컬 스토리지에는 텍스트만 저장 가능!
 }
 
 toDoForm.addEventListener("submit", onToDoSubmit);
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+console.log(savedToDos);
+if(savedToDos !== null){
+    const parsedToDos = JSON.parse(savedToDos); // 텍스트를 원래 형태로 되돌려준다.
+    toDos = parsedToDos;
+    parsedToDos.forEach(paintToDo);
+}
