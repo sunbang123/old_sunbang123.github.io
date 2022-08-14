@@ -21,3 +21,7 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+.hidden{
+    display: none;
+}
