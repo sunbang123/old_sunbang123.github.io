@@ -21,12 +21,12 @@ function deleteToDo(event){
 function paintToDo(newTodo){
     const li = document.createElement("li");
     li.id = newTodo.id;
-    const span = document.createElement("span");
-    span.innerText = newTodo.text;
+    const p = document.createElement("p");
+    p.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "❌";
+    button.innerText = "delete";
     button.addEventListener("click", deleteToDo)
-    li.appendChild(span);
+    li.appendChild(p);
     li.appendChild(button);
     toDoList.appendChild(li);
 }
@@ -49,9 +49,13 @@ toDoForm.addEventListener("submit", onToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-console.log(savedToDos);
 if(savedToDos !== null){
     const parsedToDos = JSON.parse(savedToDos); // 텍스트를 원래 형태로 되돌려준다.
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
+}
+
+if(savedUser !== null){
+    toDoForm.classList.remove(HIDDEN_CLASSNAME);
+    toDoList.classList.remove(HIDDEN_CLASSNAME);
 }

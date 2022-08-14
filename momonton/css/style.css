@@ -14,6 +14,16 @@ a {
     text-decoration: none
 }
 
+button,input[type="submit"] {
+    background: white;
+    border: transparent;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 1.3vw;
+    margin-left: 1vw;
+    width: 10%;
+}
+
 /* background img */
 body {
     background-repeat: no-repeat;
@@ -24,4 +34,71 @@ body {
 
 .hidden{
     display: none;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-box {
+    display: grid;
+    height: 100vh;
+}
+
+h1#clock {
+    font-size: 10vw;
+    align-self: end;
+    color: white;
+    text-shadow: 0 0 5px #00000047;
+}
+
+#todo-form input {
+    background: transparent;
+    outline: transparent;
+    border: transparent;
+    padding: 1vw;
+    font-size: 3vw;
+    border-bottom: 1px solid black;
+    width: 45vw;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 5px #00000047;
+}
+
+#todo-form input::placeholder {
+    color: white;
+    text-shadow: 0 0 5px #00000047;
+}
+
+ul#todo-list {
+    max-height: 20vw;
+    color: white;
+    text-shadow: 0 0 5px #00000047;
+    font-size: 2vw;
+    overflow-y: scroll;
+    background: #0000001a;
+    padding: 1vw 0;
+}
+
+ul#todo-list::-webkit-scrollbar{
+    background-color: transparent;
+    width: 6px;    
+}
+
+ul#todo-list::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+ul#todo-list li {
+    display: flex;
+    text-align: left;
+    padding: 10px 30px;
+}
+
+ul#todo-list li p {
+    width: 100%;
 }
