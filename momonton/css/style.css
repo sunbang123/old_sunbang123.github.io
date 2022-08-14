@@ -4,6 +4,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    transition-duration: 0.3s;
 }
 
 ul, ol {

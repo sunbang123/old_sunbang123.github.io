@@ -67,7 +67,7 @@ if(savedUser !== null){
     toDoList.classList.remove(HIDDEN_CLASSNAME);
 }
 
-if(toDoList.childElementCount === 0){
+if(toDoList.childElementCount === 0 || localStorage.getItem(localStorage.getItem("current user")) === null){
     toDoList.style.display = "none";
     gridBox.style.height = "60vh";
 } else {
