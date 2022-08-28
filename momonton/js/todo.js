@@ -12,32 +12,6 @@ function saveToDos(){
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); // array 형태로 텍스트 저장
 }
 
-function deleteToDo(event){
-    const li = event.target.parentElement;
-    li.remove();
-    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
-    saveToDos();
-    if(toDoList.childElementCount === 0){
-        toDoList.style.display = "none";
-        gridBox.style.height = "60vh";
-    }
-}
-
-function paintToDo(newTodo){
-    const li = document.createElement("li");
-    li.id = newTodo.id;
-    const p = document.createElement("p");
-    p.innerText = newTodo.text;
-    const button = document.createElement("button");
-    button.innerText = "delete";
-    button.addEventListener("click", deleteToDo)
-    li.appendChild(p);
-    li.appendChild(button);
-    toDoList.appendChild(li);
-    toDoList.style.display = "block";
-    gridBox.style.height = "100vh";
-}
-
 function onToDoSubmit(event){
 // js는 방생한 이벤트를 함수의 첫번째 인자로 준다.
     event.preventDefault();
@@ -67,10 +41,36 @@ if(savedUser !== null){
     toDoList.classList.remove(HIDDEN_CLASSNAME);
 }
 
-if(toDoList.childElementCount === 0 || localStorage.getItem(localStorage.getItem("current user")) === null){
+if(toDoList.childElementCount === 0 || localStorage.getItem("current user") === null){
     toDoList.style.display = "none";
     gridBox.style.height = "60vh";
 } else {
     toDoList.style.display = "block";
     gridBox.style.height = "100vh";
+}
+
+function paintToDo(newTodo){
+    const li = document.createElement("li");
+    li.id = newTodo.id;
+    const p = document.createElement("p");
+    p.innerText = newTodo.text;
+    const button = document.createElement("button");
+    button.innerText = "delete";
+    button.addEventListener("click", deleteToDo)
+    li.appendChild(p);
+    li.appendChild(button);
+    toDoList.appendChild(li);
+    toDoList.style.display = "block";
+    gridBox.style.height = "100vh";
+}
+
+function deleteToDo(event){
+    const li = event.target.parentElement;
+    li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
+    if(toDoList.childElementCount === 0){
+        toDoList.style.display = "none";
+        gridBox.style.height = "60vh";
+    }
 }

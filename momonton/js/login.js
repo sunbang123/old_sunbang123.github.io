@@ -13,6 +13,7 @@ const savedUser = localStorage.getItem("current user");
 if(savedUser !== null){
     nameForm.classList.add(HIDDEN_CLASSNAME);
     emailForm.classList.add(HIDDEN_CLASSNAME);
+    window.addEventListener('paintLoginForm', paintLoginForm);
 }
 
 const savedMembers = localStorage.getItem("previous user");
@@ -35,6 +36,8 @@ function paintLoginForm(caller, nextElement){
         const toDoList = document.getElementById("todo-list");
         toDoList.classList.remove(HIDDEN_CLASSNAME);
         logoutForm.classList.remove(HIDDEN_CLASSNAME);
+        toDoList.style.display = "block";
+        gridBox.style.height = "100vh";
     };
 }
 
