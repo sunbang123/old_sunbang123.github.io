@@ -5,6 +5,7 @@ const emailInput = emailForm.querySelector("input");
 const logoutForm = document.getElementById("logout-form");
 const HIDDEN_CLASSNAME = "hidden";
 
+// 배열로만 전부 해결하려고 해서 그렇다... 객체를 활용할 수 있도록 하자
 let user = [];
 let members = [];
 
