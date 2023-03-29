@@ -19,16 +19,16 @@
         <!-- Navigation-->
         <nav class="pt-sm-5 navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <div id="nav-top">
-
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../index.html">portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#arduino-set">아두이노 설정</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#compile">컴파일링 실행</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#error">에러</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#bread-board">브래드보드 연결</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#diagram">회로도</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#result">실행 결과</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experiment">저항 실험</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experiment-result">실험 결과</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,10 +38,10 @@
             <section class="resume-section pb-1" id="about">
                 <div class="resume-section-content">
                     <h3 class="mb-0">
-                        스마트 디바이스 실습 1주차
+                        스마트 디바이스 실습 3주차
                     </h3>
                     <div class="subheading mb-3">
-                        ESP32 Blink(점멸) 실습
+                        ESP32 LED 2개 Blink(점멸) 실습
                     </div>
                     <p class="lead">
                         한세대학교 컴퓨터공학과 22학번 김선영
@@ -53,78 +53,102 @@
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h3 class="mb-5">실습 보고서</h3>
-                    <div id="arduino-set" class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div id="bread-board" class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h4 class="mb-3">아두이노 설정</h4>
-                            <p>아두이노 보드를 컴퓨터와 연결하여 사용하려면 해당 보드의 드라이버를 설치해야 합니다. 드라이버는 하드웨어와 컴퓨터 간의 통신을 가능하게 해주는 역할을 합니다. 아두이노 보드의 드라이버를 설치하면 컴퓨터는 해당 보드를 인식하고, 아두이노 IDE에서 보드를 사용할 수 있습니다. 따라서, 아두이노 보드를 사용하기 위해서는 드라이버 설치가 필수적입니다.</p>
-                            <h5 class="mt-5">장치 드라이버 설치</h5>
-                            <p class="pt-1">CP210x USB 드라이버를 <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers">다운로드</a> 해서 운영체제에 맞게 설치합니다.</p>
-                            <h5 class="mt-5">지정보드 설정</h5>
-                            <p class="pt-1">1-1. 제어판>하드웨어 및 소리>장치관리자 창을 띄운다.</p>
-                            <img src="https://user-images.githubusercontent.com/93497158/224255467-1ab0ddd9-727e-4662-9139-ef1068261994.png"  class="img-fluid" alt="Responsive image"/>
-                            <p class="pt-1">1-2. 제어판에서 포트 번호(COM)를 확인한 후 IDE에서 Tool>Port>(올바른 포트 번호) 를 선택한다.</p>
-                            <img src="https://user-images.githubusercontent.com/93497158/224255916-88fb7011-6a34-4b21-9697-6573ca449327.png"  class="img-fluid" alt="Responsive image"/>
-                            <p class="pt-1">1-3. IDE에서 Tools>Bord>ESP32>ESP32 DEV MODULE(장치 모듈)을 선택한다.</p>
-                            <img src="https://user-images.githubusercontent.com/93497158/227437504-faaa1116-ea49-4666-ba3e-295094aa5405.png"  class="img-fluid" alt="Responsive image"/>
+                            <h5 class="mt-5">브래드보드를 사용해서 회로를 설계하는 이유?</h5>
+                            <p class="pt-1">브래드보드는 프로토 타입 회로를 만들 때 매우 유용한 도구입니다. 브래드보드는 회로를 빠르게 만들 수 있도록 설계되어 있으며, 기존 회로판에는 없는 많은 장점을 제공합니다.</p>
+                            <p class="pt-1">가장 큰 이유 중 하나는 브래드보드를 사용하면 회로를 만들기 위해 납땜을 하지 않아도 된다는 것입니다. 이는 실험적으로 디자인하거나 회로를 빠르게 수정할 필요가 있을 때 매우 유용합니다. 또한, 회로를 더 이상 사용하지 않을 때, 브래드보드에서 부품을 쉽게 제거할 수 있습니다.</p>
+                            <p class="pt-1">또한 브래드보드는 일반적으로 여러 가지 크기의 전자 부품을 수용할 수 있기 때문에, 많은 종류의 프로토타입을 만들 수 있습니다. 브래드보드는 기본적으로 저항, 커패시터, 다이오드 등을 연결할 수 있도록 설계되어 있습니다.</p>
+                            <p class="pt-1">마지막으로 브래드보드를 사용하면 회로를 구성하기 위해 전기적인 솔더링 경험이 필요하지 않습니다. 이는 전자공학을 처음 접하는 사람들에게 매우 유용합니다.</p>
+                            </p>
                         </div>
                     </div>
-                    <div id="compile" class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h4 class="mb-3">컴파일링 실행</h4>
+                            <h4 class="mb-3">연결 방법</h4>
+
+                            <p class="pt-1">1-1. 브래드보드 위의 연결점 구조 파악</p>
+                            <p class="pt-1">1-2. 전원 공급 연결: 전원 공급 라인에 USB를 연결하고, 전원과 그라운드를 이용해 회로를 구성한다.</p>
+                            <p class="pt-1">1-3. 전자 부품 연결: 전자 부품은 브래드보드의 연결점에 꽂는다.</p>
+                            <p class="pt-1">1-4. 회로 구성: 전원 공급 연결과 전자 부품 연결을 이용해 회로를 구성한다.</p>
+                            <p class="pt-1">1-5. 전원 공급 종료: 실험이 끝난 후에는 전원 공급을 종료한다.</p>
                             <h5 class="mt-5">코드</h5>
                             <pre>
 <code>
-    int LED_BUILTIN = 2; // 리셋을 누르거나 보드에 전원을 공급할 때 설정 기능이 한 번 실행됩니다.
-        void setup() { // 디지털 핀 LED 초기화_출력으로 내장됨.
-        pinMode(LED_BUILTIN, OUTPUT);
+    int led1 = 22;  // LED 22의 핀 번호를 변수에 저장
+    int led2 = 23;  // LED 23의 핀 번호를 변수에 저장
+    
+    void setup() {
+      pinMode(led1, OUTPUT);
+      pinMode(led2, OUTPUT);
     }
     
-    // 루프문을 통해서 LED가 켜졌다 꺼졌다를 계속 반복하도록 합니다.
     void loop() {
-        digitalWrite(LED_BUILTIN, HIGH);  // LED를 켭니다(HIGH는 전압 레벨)
-        delay(1000);                      // 지연시간 1초
-        digitalWrite(LED_BUILTIN, LOW);   // 전압을 낮게 하여 LED를 끕니다.
-        delay(1000);                      // 지연시간 1초
+      digitalWrite(led1, HIGH);
+      digitalWrite(led2, LOW);
+      delay(1000);
+      digitalWrite(led1, LOW);
+      digitalWrite(led2, HIGH);
+      delay(1000);
     }
 </code>
                             </pre>
-                            <p class="pt-1">2-1. SELECT 창에 ESP32 DEV MODULE를 선택한 후 -> 버튼을 눌러 컴파일(compile)해준다.</p>
-                            <img src="https://user-images.githubusercontent.com/93497158/224256159-5f9a6ad9-3aeb-4573-9e47-6d5455cb2ba8.png" class="img-fluid" alt="Responsive image">
-                            <p class="pt-1">2-2. 컴파일링이 진행될동안 장치의 오른쪽 버튼(업로드 버튼)을 2초 누른다.</p>
-                            <img src="https://user-images.githubusercontent.com/93497158/227437245-ad8d5b49-03ab-4aa3-9139-25f552a28ff6.jpg"  class="img-fluid" alt="Responsive image"/>
-                            <p class="pt-1">2-3. 컴파일이 성공하면 아래의 화면처럼 출력이 되는걸 볼 수 있습니다.</p>
-                            <img src="https://user-images.githubusercontent.com/93497158/227443280-d233f09b-fa62-434d-8fa1-b4282493710c.png"  class="img-fluid" alt="Responsive image"/>
+                            <h5 class="mt-5">사용된 함수</h5>
+                            <p class="pt-1">- pinMode(): led1과 led2 핀을 출력 모드로 설정</p>
+                            <p class="pt-1">- digitalWrite(): led1 핀을 HIGH(켜짐)으로 설정하고 led2 핀을 LOW(꺼짐)으로 설정</p>
+                            <p class="pt-1">- delay(1000) : 1초 지연</p>
                         </div>
                     </div>
-                    <div id="error" class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div id="diagram" class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h4 class="mb-3">에러</h4>
-                            <p class="pt-1">전력 공급이 안되거나 보드 설정이 잘못 되었을 경우 에러가 납니다.</p>
-                            <img src="https://user-images.githubusercontent.com/93497158/227443240-9200c904-3cae-4c1b-b218-c0700807773c.png"  class="img-fluid" alt="Responsive image"/>
-                            <h5 class="mt-5">에러 코드</h5>
-                            <pre>
-                                <code>
-    Sketch uses 235913 bytes (17%) of program storage space. Maximum is 1310720 bytes.
-    Global variables use 22056 bytes (6%) of dynamic memory, leaving 305624 bytes for local variables. Maximum is 327680 bytes.
-    esptool.py v4.5.1
-    Serial port COM3
-    Connecting......................................
-
-    A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! The chip needs to be in download mode.
-    For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
-    Failed uploading: uploading error: exit status 2
-                                </code>
-                            </pre>
-                            <p class="pt-1">위 에러는 ESP32 보드가 부트 모드로 실행되고 있어서 업로드에 실패한 것이다. 보드를 업로드 모드로 전환하면 문제를 해결할 수 있다. <br> 업로드 버튼을 눌렀는지 확인하고 지정보드 설정이 바르게 되었는지 재확인합니다. <br> 자세한 해결 방법: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html</p>
+                            <h4 class="mb-3">회로도</h4>
+                            <img src="https://user-images.githubusercontent.com/93497158/228120197-bc5d7635-4ad4-4a91-b7c5-5df81fabec22.jpg"  class="img-fluid" alt="Responsive image">
                         </div>
                     </div>
                     <div id="result" class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h4 class="mb-3">실행 결과</h4>
-                            <video controls poster="videos/Clouds.png" class="img-fluid" alt="Responsive image">
-                                <source src="https://user-images.githubusercontent.com/93497158/227442799-6c702c30-2bc1-4867-92a7-0efb57037d45.mp4" type="video/mp4">
+                            <video controls poster="videos/Clouds.png"  class="img-fluid" alt="Responsive image">
+                                <source src="https://user-images.githubusercontent.com/93497158/228115484-1b1b59a9-b2a2-464b-9e40-677994275d1e.mp4" type="video/mp4">
                                 <strong>Your browser does not support the video tag.</strong>
                             </video>
+                        </div>
+                    </div>
+                    <div id="experiment" class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h4 class="mb-3">저항 실험: 저항값이 다른 저항을 연결하면 LED 밝기에 차이가 있을까?</h4>
+                            <p class="pt-1">준비물</p>
+                            <p>- 저항1(주황색, 주황색, 갈색, 금색)</p>
+                            <p>- 저항2(빨간색, 보라색, 검은색, 검은색, 갈색)</p>
+                            <p>- 저항3(갈색, 빨간색, 갈색, 금색)</p>
+                            </p>
+                            <p class="pt-1">저항 계산법: 색상코드(4밴드, 5밴드, 6밴드)</p>
+                            <img src="https://user-images.githubusercontent.com/93497158/228117223-5ddbf6cc-5546-4bc7-a6dc-27e4744d3de8.gif" class="img-fluid" alt="Responsive image">
+                            <p class="pt-5">4 자리 색상 코드는 첫 번째 띠와 두 번째 띠는 두 자리의 숫자를 나타내고, 세 번째 띠는 배율, 네 번째 띠는 오차를 나타내는 코드이다. 보통 앞뒤를 구별하기 위해, 세 번째 띠까지 간격이 좁고, 네 번째 띠는 간격이 넓게 표시 한다.
+                                계산법 예) 빨강, 빨강, 검정, 금색 : 22 x 1 = 22Ω, 오차 ±5%</p>
+                            <p class="pt-1">저항1: 주황색, 주황색, 갈색, 금색 => 33 x 10 = 330Ω, 오차 ±5%</p>
+                            <p class="pt-1">저항2: 빨간색, 보라색, 검은색, 검은색, 갈색 => 270 x 1 = 270Ω, 오차 ±270%</p>
+                            <p class="pt-1">저항3: 갈색, 빨간색, 갈색, 금색 => 12 x 10 = 120Ω, 오차 ±5%</p>
+                        </div>
+                    </div>
+                    <div id="experiment-result" class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h4 class="mb-3">실험 결과</h4>
+                            <p class="pt-2">- 330Ω</p>
+
+<img src="https://user-images.githubusercontent.com/93497158/228115695-70f5a5fd-83a4-44ac-aee8-3497982687b5.jpg" class="img-fluid" alt="Responsive image">
+
+                            <p class="pt-5">- 270Ω</p>
+
+<img src="https://user-images.githubusercontent.com/93497158/228115702-8c3928ba-9d42-4b35-9b82-82399b06eb9c.jpg"  class="img-fluid" alt="Responsive image">
+
+                            <p class="pt-5">- 120Ω</p>
+
+<img src="https://user-images.githubusercontent.com/93497158/228115686-8dd3d3fa-8c30-45c4-a496-91f7b5c9c312.jpg"  class="img-fluid" alt="Responsive image">
+                            <p class="pt-5">옴의 법칙[I = V/R, <= V(전압), I(전류), R(저항) 전류는 저항에 비례하며 전압에 반비례]에 의해 저항이 클수록 전압은 낮아지고 전류는 조금 흐르게 된다.</p>
+
+                            <p class="pt-1">반대로 저항이 작을수록 전압이 높아지고 전류는 많이 흐르게 되서 120Ω 저항을 연결한 LED의 밝기가 가장 센 것을 볼 수 있다.</p>
+                            <p class="pt-1">LED 밝기 120Ω > 270Ω > 330Ω</p>
                         </div>
                     </div>
                 </div>
