@@ -318,6 +318,9 @@ img,
 svg {
   vertical-align: middle;
 }
+img{
+  width:700px;
+}
 
 table {
   caption-side: bottom;
