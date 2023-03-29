@@ -318,7 +318,7 @@ img,
 svg {
   vertical-align: middle;
 }
-img{
+img, video{
   width:700px;
 }
 
