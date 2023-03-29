@@ -3918,6 +3918,16 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
+  /*사용자 추가*/
+
+  #sideNav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: block;
+      transition: top 0.3s;
+  }
+  
   .navbar-expand-md {
     flex-wrap: nowrap;
     justify-content: flex-start;

@@ -32,3 +32,22 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+var mql = window.matchMedia("screen and (max-width: 768px)");
+
+if (mql.matches) {
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("sideNav").style.top = "0";
+    } else {
+        document.getElementById("sideNav").style.top = "-3.5rem";
+    }
+    prevScrollpos = currentScrollPos;
+    }
+} else {
+	console.log("화면의 너비가 768px 보다 큽니다.");
+}
+// When the user scrolls down 20px from the top of the document, slide down the navbar
