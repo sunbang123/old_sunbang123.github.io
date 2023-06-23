@@ -56,46 +56,182 @@
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h3 class="mb-5">실습</h3>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <a href="practice/day1/index.html">
-                                <h4 class="mb-0">스마트 디바이스 실습 1주차</h4>
-                                <div class="subheading mb-3">ESP32 Blink</div>
-                                <p>장치 드라이버 설치, 아두이노에서 지정보드 설정, 코드, 에러, 컴파일링 및 실행</p>
-                            </a>
-                    </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2023/03/10</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <a href="practice/day2/index.html">
-                                <h4 class="mb-0">스마트 디바이스 실습 2주차</h4>
-                                <div class="subheading mb-3">ESP32 LED Blink</div>
-                                <p>코드, 사용된 함수, 에러, 아두이노 핀보드</p>
-                            </a>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h5 class="mb-0">Smart Device day : 1 ~ 9</h5>
+                            </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day1/index.html">
+                                            <h6 class="mb-0">day 1 : 스마트 디바이스 개요</h6>
+                                            <div class="subheading mb-3">스마트 디바이스의 정의, 마이크로프로세서와 스마트폰, IoT 구조의 요소</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/03/10</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day2/index.html">
+                                            <h6 class="mb-0">day 2 : ESP32 Blink(점멸)</h6>
+                                            <div class="subheading mb-3">장치 드라이버 설치, 아두이노에서 지정보드 설정, 코드, 컴파일링 및 실행, 에러</div>                                            
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/03/17</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day3/index.html">
+                                            <h6 class="mb-0">day 3 : ESP32 LED Blink(점멸)</h6>
+                                            <div class="subheading mb-3">아두이노에서 지정보드 설정, 컴파일링 및 실행</div>
+                                            
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/03/24</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day4/index.html">
+                                            <h6 class="mb-0">day 4 : ESP32 LED 2개 Blink(점멸)</h6>
+                                            <div class="subheading mb-3">브래드보드의 특징, 연결방법, 코드, 컴파일링 및 실행, 저항실험</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/03/10</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day5.1/index.html">
+                                            <h6 class="mb-0">day 5.1 : ESP32 온습도센서(DHT 11)와 액정 디스플레이(LCD)</h6>
+                                            <div class="subheading mb-3">온습도 센서 DHT의 작동 원리, 온습도 Serial Monitor 출력, LCD Hello World 출력, 온습도 LCD 출력, 문제 해결</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/03/31</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day5.2/index.html">
+                                            <h6 class="mb-0">day 5.2 : ESP32 LCD 주소 찾기</h6>
+                                            <div class="subheading mb-3">I2C 통신, LCD 주소 찾기 실습, 코드, 컴파일링 및 실행</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/04/07</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day6/index.html">
+                                            <h6 class="mb-0">day 6 : ESP32 블루투스 연결</h6>
+                                            <div class="subheading mb-3">블루투스의 정의, ESP32 블루투스 연결 실습, 컴파일링 및 실행</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/04/13</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day8/index.html">
+                                            <h6 class="mb-0">day 8 : Node Red 설치, 사용 실습</h6>
+                                            <div class="subheading mb-3">Node Red의 정의, 설치 방법, 플로우 배포, dashboard</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/04/20</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day9/index.html">
+                                            <h6 class="mb-0">day 9 : ThingSpeak</h6>
+                                            <div class="subheading mb-3">ThingSpeak의 정의, 설정 방법, Arduino 실습</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/04/20</span></div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2023/03/18</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <a href="practice/day3/index.html">
-                                <h4 class="mb-0">스마트 디바이스 실습 3주차</h4>
-                                <div class="subheading mb-3">ESP32 LED 2개 Blink</div>
-                                <p>브래드보드를 사용해서 회로를 설계하는 이유, 브래드보드 사용법, 회로도, 저항값 LED 밝기 실험, 저항 계산법 </p>
-                            </a>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <h5 class="mb-0">Smart Device day : 10 ~ 15</h5>
+                            </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day10/index.html">
+                                            <h6 class="mb-0">day 10 : ThingSpeak DHT11 WIFI</h6>
+                                            <div class="subheading mb-3">ESP32 코드, 컴파일링 및 실행</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/04/27</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day11/index.html">
+                                            <h6 class="mb-0">day 11 : Node Red HTTP GET</h6>
+                                            <div class="subheading mb-3">Gauge 실습, HTTP GET 요청</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/05/11</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day12/index.html">
+                                            <h6 class="mb-0">day 12 : MQTT</h6>
+                                            <div class="subheading mb-3">MQTT 온습도 내보내기, 코드, 컴파일링 및 실행, 번외 : 스마트폰 MQTT, MQTT 브로커 설정</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/05/18</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day13/index.html">
+                                            <h6 class="mb-0">day 13 : MQTT & Nod red</h6>
+                                            <div class="subheading mb-3">MQTT 온습도 내보내기(Node-red), 코드, 컴파일링 및 실행</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/05/25</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day14.1/index.html">
+                                            <h6 class="mb-0">day 14.1 : ESP32를 웹서버로 구동하기</h6>
+                                            <div class="subheading mb-3">웹 서버의 정의, ESP32 Wi-Fi 작동 모드, 웹 서버 구축, 코드, 컴파일링 및 실행</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/06/02</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day14.2/index.html">
+                                            <h6 class="mb-0">day 14.2 : AWS</h6>
+                                            <div class="subheading mb-3">AWS의 개념, 코드, 컴파일링 및 실행</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/06/09</span></div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day15.1/index.html">
+                                            <h6 class="mb-0">day 15.1 : AWS MQTT 실습</h6>
+                                            <div class="subheading mb-3">AWS 보안 서비스, ESP32 - AWS MQTT 연결, AWS에 온습도값 보내기, 코드, 컴파일링 및 실행</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/06/17</span></div>
+                                </div>            
+                                <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                                    <div class="flex-grow-1">
+                                        <a href="practice/day15.2/index.html">
+                                            <h6 class="mb-0">day 15.2 : aws & node red</h6>
+                                            <div class="subheading mb-3">Node-red와 AWS, 온습도값 AWS mqtt - nodered 출력, 코드, 컴파일링 및 실행</div>
+                                        </a>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">2023/06/21</span></div>
+                                </div>            
+                            </div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2023/03/28</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <a href="practice/day4/index.html">
-                                <h4 class="mb-0">스마트 디바이스 실습 4주차</h4>
-                                <div class="subheading mb-3">ESP32 온습도센서(DHT 11)와 액정 디스플레이(LCD)</div>
-                                <p>온습도 센서 DHT의 작동 원리, 온습도 Serial Monitor 출력하기, LCD로 Hello world 출력하기, 온습도 LCD로 출력하기, 실습 과정에서의 문제 해결</p>
-                                <p></p>
-                            </a>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2023/04/05</span></div>
                     </div>
                 </div>
             </section>
@@ -103,7 +239,7 @@
             <section class="resume-section" id="project">
                 <div class="resume-section-content">
                     <h3 class="mb-5">프로젝트</h3>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
                         <div class="flex-grow-1">
                             <a href="momonton/index.html">
                                 <h4 class="mb-0">클론코딩 모멘텀</h4>

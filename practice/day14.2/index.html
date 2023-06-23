@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>스마트디바이스 실습3주차</title>
+        <title>스마트디바이스 실습2주차</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -24,9 +24,9 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../index.html">portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#arduino-set">지정보드 설정</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#pinboard">실습</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#arduino-set">아두이노 설정</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#error">에러</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#pinboard">핀보드</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#result">실행 결과</a></li>
                 </ul>
             </div>
@@ -37,7 +37,7 @@
             <section class="resume-section pb-1" id="about">
                 <div class="resume-section-content">
                     <h3 class="mb-0">
-                        스마트 디바이스 실습 3주차
+                        스마트 디바이스 실습 2주차
                     </h3>
                     <div class="subheading mb-3">
                         ESP32 LED Blink(점멸) 실습
@@ -51,56 +51,22 @@
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h3 class="mb-1">실습 보고서</h3>
+                    <h3 class="mb-5">실습 보고서</h3>
                     <div id="arduino-set" class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h5 class="mt-4">지정보드 설정</h5>
+                            <h5 class="mt-5">지정보드 설정</h5>
                             <p class="pt-1">1-1. 제어판>하드웨어 및 소리>장치관리자 창을 띄움.</p>
                             <p class="pt-1">1-2. 제어판에서 포트 번호(COM)를 확인한 후 IDE에서 Tool>Port>(올바른 포트 번호) 를 선택함.</p>
                             <p class="pt-1">1-3. IDE에서 Tools>Bord>ESP32>ESP32 DEV MODULE(장치 모듈)을 선택함.</p>
                         </div>
                     </div>
-                    <hr class="mb-5">
-                    <div id="pinboard" class="d-flex flex-column flex-md-row justify-content-between mb-5 mt-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-5">실습 : ESP32 LED Blink</h3>
-                            <div class="card-group">
-                                <div class="card">
-                                   <div class="card-header">
-                                    아두이노 핀보드
-                                   </div>
-                                  <img class="card-img-top img-fluid" src="https://user-images.githubusercontent.com/93497158/226109525-e6cfe4f8-c259-4337-adc9-0e9d4371e116.jpg">
-                                  <div class="card-body">
-                                    <p class="card-text">
-                                        <ol style="list-style-type:inherit">
-                                            <li>아두이노 핀보드는 마이크로컨트롤러에서 사용되는 다양한 핀들을 관리하고 사용할 수 있도록 해주는 보드</li>
-                                            <li>보드는 대개 직사각형 모양으로 되어 있으며, 이 안에 다양한 핀들이 위치함.</li>
-                                            <li>GND 핀은 전기 회로에서 전하가 흐르는 기준점인 그라운드(Ground)를 나타냄.</li>
-                                            <li>이 핀들은 전기 회로에서 전압을 조절하거나 전기 신호를 처리하는 역할을 함.</li>
-                                        </ol>            
-                                    </p>
-                                  </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        회로 연결
-                                    </div>    
-                                  <img class="card-img-top img-fluid" src="https://github.com/sunbang123/Smart_device/assets/93497158/385b70fb-13a6-474e-aba3-0c36a4954c35">
-                                  <div class="card-body">
-                                    <p class="card-text">위 사진과 같이 연결</p>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="m-0" />
-                    <div id="compile" class="d-flex flex-column flex-md-row justify-content-between mb-5 mt-5">
+                    <div id="compile" class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h4 class="mb-3">컴파일링 실행</h4>
 
                             <p class="pt-1">2-1. SELECT 창에 ESP32 DEV MODULE를 선택한 후 -> 버튼을 눌러 컴파일(compile)해줌.</p>
                             <p class="pt-1">2-2. 컴파일링이 진행될동안 장치의 오른쪽 버튼(업로드 버튼)을 2초 누름.</p>
-                            <p class="pt-1">2-3. 컴파일 & 업로드</p>
+                            <p class="pt-1">2-3. 컴파일이 성공하면 아래의 화면처럼 출력이 되는걸 볼 수 있음.</p>
 
                             <h5 class="mt-5">코드</h5>
                             <pre>
@@ -123,17 +89,24 @@
                             <p class="pt-1">- delay(1000) : 1초 지연.</p>
                         </div>
                     </div>
-                    <hr class="m-0" />
-
-                    <div id="error" class="d-flex flex-column flex-md-row justify-content-between mb-5 mt-5">
+                    <div id="error" class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h4 class="mb-3">에러</h4>
                             LED에는 극성이 있으며, 긴 다리가 양극, 짧은 다리가 음극임. 양극과 음극을 바르게 연결하지 않으면 제대로 작동하지 않음. 저항 옆에 양극을 연결함. 또한, LED 22 핀에 회로가 적절하게 연결되었는지 확인 함. (GPIO22, 저항, LED +)
                         </div>
                     </div>
-                    <hr class="m-0" />
-
-                    <div id="result" class="d-flex flex-column flex-md-row justify-content-between mb-5 mt-5">
+                    <div id="pinboard" class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h4 class="mb-3">아두이노 핀보드</h4>
+                            <img src="https://user-images.githubusercontent.com/93497158/226109525-e6cfe4f8-c259-4337-adc9-0e9d4371e116.jpg"  class="img-fluid" alt="Responsive image"/>
+                            <h5 class="mt-5">설명</h5>
+                            <p class="pt-1">아두이노 핀보드는 아두이노 마이크로컨트롤러에서 사용되는 다양한 핀들을 관리하고 사용할 수 있게 해주는 보드임. 아두이노 핀보드는 대부분의 경우 직사각형 모양을 하며, 이 모양 안에 다양한 핀들이 위치하고 있음. GND는 아두이노 보드의 그라운드(Ground)를 의미함. 그라운드는 전기 회로에서 전하가 흐르는 기준점으로, 전기적으로 중립적인 지점임. 전기 회로를 구성할 때 GND 핀들은 전기 회로에서 전압을 조절하거나 전기 신호를 처리함.
+                            <br><br>
+                            <img src="https://user-images.githubusercontent.com/93497158/227433855-87e1d8cf-e4a9-4a11-8161-a21af40e51d9.jpg"  class="img-fluid" alt="Responsive image"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="result" class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h4 class="mb-3">실행 결과</h4>
                             <video controls poster="videos/Clouds.png"  class="img-fluid" alt="Responsive image">
