@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>스마트디바이스 실습3주차</title>
+        <title>스마트디바이스 실습10주차</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -19,16 +19,15 @@
         <!-- Navigation-->
         <nav class="pt-sm-5 navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <div id="nav-top">
+
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../../index.html">portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#bread-board">브래드보드 연결</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#diagram">회로도</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#result">실행 결과</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experiment">저항 실험</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experiment-result">실험 결과</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#smart-device">스마트디바이스란?</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Sum">요약</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#End">배운점</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,10 +37,10 @@
             <section class="resume-section pb-1" id="about">
                 <div class="resume-section-content">
                     <h3 class="mb-0">
-                        스마트 디바이스 실습 3주차
+                        스마트 디바이스 실습 10주차
                     </h3>
                     <div class="subheading mb-3">
-                        ESP32 LED 2개 Blink(점멸) 실습
+                        ThingSpeak DHT11 WIFI
                     </div>
                     <p class="lead">
                         한세대학교 컴퓨터공학과 22학번 김선영
@@ -51,115 +50,160 @@
             <hr class="m-0" />
             <!-- Experience-->
             <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h3 class="mb-5">실습 보고서</h3>
-                    <div id="bread-board" class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h5 class="mt-5">브래드보드의 특징과 회로를 설계하는 방법</h5>
-                            <p class="pt-1">- 프로토 타입 회로를 만들 때 쓰이며 회로를 빠르게 수정할 때 유용하고 회로를 더 이상 사용하지 않을 때, 브래드보드에서 부품을 쉽게 제거함.</p>
-                            <p class="pt-1">(ex) 저항을 연결하려면 저항의 양끝을 브래드보드의 두 개의 수직 레일 중 하나에 각각 삽입, 접촉점이 있는 가로와 세로의 레일은 부품을 삽입한 구멍들은 이 접촉점들과 연결됨</p>
-                            <p class="pt-1">- 저항의 한 쪽 끝을 삽입한 구멍에 연결한 후, 다른 쪽 끝을 다른 접촉점에 연결함으로써 저항을 회로에 연결</p>
-                            <p class="pt-1">- 브래드보드는 여러 가지 전자 부품을 수용할 수 있음.</p>
-                            <p class="pt-1">(ex) 브래드보드의 행에는 저항을 꽂을 수 있는 공간이 있고 보통 5구 혹은 10구로 나뉘어져 있어 저항의 핀을 꽂을 수 있음.</p>
-                            <p class="pt-1">- 점퍼선: 브래드보드의 접촉점들을 연결하는데 사용되는 전선</p>
-                            <p class="pt-1">- 회로를 수정해야 할 때는 점퍼선을 다른 접촉점에 연결하거나 새로운 위치에 삽입하여 회로를 쉽게 수정, 사용하지 않는 부품을 제거할 때도 브래드보드에서 간편하게 뽑아냄</p>
-                            <p class="pt-1">- 브래드보드의 접촉점에 삽입되기 때문에 전기적인 연결이 완료되며 부품을 녹여 연결하는 솔더링이 필요하지 않음.</p>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h4 class="mb-3">연결 방법</h4>
+                <div class="resume-section-content mb-5">
+                    <h3 class="mb-4">WIFI란?</h3>
+                    <ol style="list-style-type:inherit">
+                        <li>Wi-Fi (Wireless Fidelity)는 무선 네트워크 기술로, 컴퓨터, 스마트폰, 태블릿 등의 장치가 인터넷에 접속하고 통신할 수 있도록 함.</li>
+                        <li>Wi-Fi를 사용하면 인터넷에 유선 연결 없이 무선으로 데이터를 주고받을 수 있음.</li>
+                    </ol>
+                    <h3 class="mb-4">ThingSpeak Wifi통신</h3>
+                    <ol style="list-style-type:inherit">
+                        <li>ThingSpeak는 Wi-Fi를 통해 장치와 인터넷 간의 데이터 통신을 지원함.</li>
+                        <li>장치(예: ESP32)에서 수집한 데이터를 ThingSpeak 서버로 업로드할 수 있고 이러한 기능을 사용하여 원격에서 데이터를 모니터링하고 저장할 수 있음.</li>
+                    </ol>
 
-                            <p class="pt-1">1-1. 브래드보드 위의 연결점 구조 파악</p>
-                            <p class="pt-1">- 행과 열의 구성: 브래드보드는 일렬로 배치된 행과 열의 구성으로 되어 있음.</p>
-                            <p class="pt-1">- 일반적으로 행이 가로 방향이고, 열이 세로 방향.</p>
-                            <p class="pt-1">- 행과 열은 메탈 스트립으로 되어 있어 전류를 흘려보냄.</p>
-                            <p class="pt-1">- 행과 열은 특정 규칙에 따라 연결되어 있어, 전자 부품을 브래드보드에 꽂으면 자동으로 연결되는 구조를 가지고 있음.</p>
-                            <p class="pt-1">1-2. 전원 공급 연결: 전원 공급 라인에 USB를 연결하고, 전원과 그라운드를 이용해 회로를 구성함.</p>
-                            <p class="pt-1">1-3. 전자 부품 연결: 전자 부품은 브래드보드의 연결점에 꽂음.</p>
-                            <p class="pt-1">1-4. 회로 구성: 전원 공급 연결과 전자 부품 연결을 이용해 회로를 구성함.</p>
-                            <p class="pt-1">1-5. 전원 공급 종료: 실험이 끝난 후에는 전원 공급을 종료함.</p>
-                            <h5 class="mt-5">코드</h5>
-                            <pre>
-<code>
-    int led1 = 22;  // LED 22의 핀 번호를 변수에 저장
-    int led2 = 23;  // LED 23의 핀 번호를 변수에 저장
+                    <hr class="mt-5">
+                    <div id="diagram" class="d-flex flex-column flex-md-row justify-content-between mb-3 mt-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-4">실습 : ThingSpeak & WIFI</h3>
+                                <div class="card-group">
+                                    <div class="card p-3">
+                                      <div class="card-body">
+                                        <p class="card-text">
+                                            <p>- 필요한 라이브러리 가져오기</p>
+                                            <pre>
+                                                <code>
+    #include &lt;WiFi.h>
+    #include &lt;WiFiClient.h>
+    #include &lt;DHT.h>
+    ...  </code>
+                                              </pre>
+                                            <br>
+                                            <p>- WiFi 연결 설정하기</p>
+                                            <pre>
+                                            <code>
+    #define WIFI_SSID "[wifi id]"
+    #define WIFI_PASSWORD "[password]"
+...                                                </code>
+                                          </pre>
+                                          <p>- ESP32와 DHT11 온습도 센서, 그리고 ThingSpeak를 사용 설정</p>
+                                          <pre>
+                                          <code>
+    #define DHT_PIN 13 // DHT11 센서 연결 핀
+    #define DHT_TYPE DHT11
     
-    void setup() {
-      pinMode(led1, OUTPUT);
-      pinMode(led2, OUTPUT);
-    }
+    #define THINGSPEAK_SERVER "api.thingspeak.com"
+    #define THINGSPEAK_API_KEY "7OWWUL25WGUBU610"
+    #define THINGSPEAK_CHANNEL_ID 2153944
     
-    void loop() {
-      digitalWrite(led1, HIGH);
-      digitalWrite(led2, LOW);
-      delay(1000);
-      digitalWrite(led1, LOW);
-      digitalWrite(led2, HIGH);
-      delay(1000);
-    }
+    DHT dht(DHT_PIN, DHT_TYPE);
+    
+    WiFiClient client;
+    ...
 </code>
-                            </pre>
-                            <h5 class="mt-5">사용된 함수</h5>
-                            <p class="pt-1">- pinMode(): led1과 led2 핀을 출력 모드로 설정</p>
-                            <p class="pt-1">- digitalWrite(): led1 핀을 HIGH(켜짐)으로 설정하고 led2 핀을 LOW(꺼짐)으로 설정</p>
-                            <p class="pt-1">- delay(1000) : 1초 지연</p>
+                                        </pre>
+                                      </p>
+                                                <p>메인 코드</p>
+                                                <pre>
+                                                <code>
+    ...
+    void setup() {
+        Serial.begin(115200);
+        
+        WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+        
+        while (WiFi.status() != WL_CONNECTED) {
+            delay(1000);
+            Serial.println("Connecting to WiFi...");
+        }
+        
+        Serial.println("Connected to WiFi!");
+        
+        dht.begin();
+        }
+        
+        void loop() {
+        float temperature = dht.readTemperature(); // 온도 읽기
+        float humidity = dht.readHumidity(); // 습도 읽기
+        
+        if (isnan(temperature) || isnan(humidity)) {
+            Serial.println("Failed to read from DHT sensor!");
+            return;
+        }
+        
+        Serial.print("Temperature: ");
+        Serial.print(temperature);
+        Serial.print(" °C, Humidity: ");
+        Serial.print(humidity);
+        Serial.println(" %");
+        
+        if (client.connect(THINGSPEAK_SERVER, 80)) {
+            String data = String("field1=") + String(temperature) +
+                        "&field2=" + String(humidity);
+        
+            String request = String("POST /update HTTP/1.1\n") +
+                            "Host: " + String(THINGSPEAK_SERVER) + "\n" +
+                            "Connection: close\n" +
+                            "X-THINGSPEAKAPIKEY: " + String(THINGSPEAK_API_KEY) + "\n" +
+                            "Content-Type: application/x-www-form-urlencoded\n" +
+                            "Content-Length: " + String(data.length()) + "\n\n" +
+                            data;
+        
+            client.print(request);
+        
+            Serial.println("Sending data to ThingSpeak...");
+        
+            delay(2000); // ThingSpeak 서버에 전송을 위해 충분한 지연 시간
+        
+            client.stop();
+        }
+        else {
+            Serial.println("Failed to connect to ThingSpeak!");
+        }
+        
+        delay(5000); // 5초마다 전송
+        }
+                                                </code>
+                                              </pre>
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <h5 class="mt-5">결과화면</h5>
+                                <p>- Serial Monitor에 출력된 모습</p>
+                                <img src="https://github.com/sunbang123/Smart_device/assets/93497158/d78c394c-e53c-4dbc-9c54-9c1958a0b4e0" class="img-fluid" alt="Responsive image">
+                                <br><br>
+                                <p>- ThingSpeak</p>
+                                <img src="https://github.com/sunbang123/Smart_device/assets/93497158/a6847a9d-fa0e-4d4d-bb47-3e2479258d25" class="img-fluid" alt="Responsive image">
+
+                            </div>
                         </div>
-                    </div>
-                    <div id="diagram" class="d-flex flex-column flex-md-row justify-content-between mb-5">
+
+                    <hr class="mb-5">
+                    <div id="End" class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h4 class="mb-3">회로도</h4>
-                            <img src="https://user-images.githubusercontent.com/93497158/228120197-bc5d7635-4ad4-4a91-b7c5-5df81fabec22.jpg"  class="img-fluid" alt="Responsive image">
+                            <h4 class="mb-3">실습을 통해 느낀점</h4>
+                            <p>- ThingSpeak와 wifi 연동에 대한 기초 지식을 습득하고 데이터를 시각화 하는 방법에 대해서 배울 수 있었음.</p>
+                            <p>- wifi 통신의 개념에 대해서 정리할 수 있었고 ThingSpeak에 직접 실습해보면서 흥미를 느낌.</p>
                         </div>
                     </div>
-                    <div id="result" class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h4 class="mb-3">실행 결과</h4>
-                            <video controls poster="videos/Clouds.png"  class="img-fluid" alt="Responsive image">
-                                <source src="https://user-images.githubusercontent.com/93497158/228115484-1b1b59a9-b2a2-464b-9e40-677994275d1e.mp4" type="video/mp4">
-                                <strong>Your browser does not support the video tag.</strong>
-                            </video>
-                        </div>
-                    </div>
-                    <div id="experiment" class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h4 class="mb-3">저항 실험: 저항값이 다른 저항을 연결하면 LED 밝기에 차이가 있을까?</h4>
-                            <p class="pt-1">준비물</p>
-                            <p>- 저항1(주황색, 주황색, 갈색, 금색)</p>
-                            <p>- 저항2(빨간색, 보라색, 검은색, 검은색, 갈색)</p>
-                            <p>- 저항3(갈색, 빨간색, 갈색, 금색)</p>
-                            </p>
-                            <p class="pt-1">저항 계산법: 색상코드(4밴드, 5밴드, 6밴드)</p>
-                            <img src="https://user-images.githubusercontent.com/93497158/228117223-5ddbf6cc-5546-4bc7-a6dc-27e4744d3de8.gif" class="img-fluid" alt="Responsive image">
-                            <p class="pt-5">4 자리 색상 코드는 첫 번째 띠와 두 번째 띠는 두 자리의 숫자를 나타내고, 세 번째 띠는 배율, 네 번째 띠는 오차를 나타내는 코드. 보통 앞뒤를 구별하기 위해, 세 번째 띠까지 간격이 좁고, 네 번째 띠는 간격이 넓게 표시 함.
-                                계산법 예) 빨강, 빨강, 검정, 금색 : 22 x 1 = 22Ω, 오차 ±5%</p>
-                            <p class="pt-1">저항1: 주황색, 주황색, 갈색, 금색 => 33 x 10 = 330Ω, 오차 ±5%</p>
-                            <p class="pt-1">저항2: 빨간색, 보라색, 검은색, 검은색, 갈색 => 270 x 1 = 270Ω, 오차 ±270%</p>
-                            <p class="pt-1">저항3: 갈색, 빨간색, 갈색, 금색 => 12 x 10 = 120Ω, 오차 ±5%</p>
-                        </div>
-                    </div>
-                    <div id="experiment-result" class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h4 class="mb-3">실험 결과</h4>
-                            <p class="pt-2">- 330Ω</p>
-
-<img src="https://user-images.githubusercontent.com/93497158/228115695-70f5a5fd-83a4-44ac-aee8-3497982687b5.jpg" class="img-fluid" alt="Responsive image">
-
-                            <p class="pt-5">- 270Ω</p>
-
-<img src="https://user-images.githubusercontent.com/93497158/228115702-8c3928ba-9d42-4b35-9b82-82399b06eb9c.jpg"  class="img-fluid" alt="Responsive image">
-
-                            <p class="pt-5">- 120Ω</p>
-
-<img src="https://user-images.githubusercontent.com/93497158/228115686-8dd3d3fa-8c30-45c4-a496-91f7b5c9c312.jpg"  class="img-fluid" alt="Responsive image">
-                            <p class="pt-5">옴의 법칙[I = V/R, <= V(전압), I(전류), R(저항) 전류는 저항에 비례하며 전압에 반비례]에 의해 저항이 클수록 전압은 낮아지고 전류는 조금 흐르게 됨.</p>
-
-                            <p class="pt-1">반대로 저항이 작을수록 전압이 높아지고 전류는 많이 흐르게 되서 120Ω 저항을 연결한 LED의 밝기가 가장 센 것을 볼 수 있음</p>
-                            <p class="pt-1">LED 밝기 120Ω > 270Ω > 330Ω</p>
-                        </div>
-                    </div>
+                    <hr class="mb-3">
+                    <a style="text-align: left;" href="../day9/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                          </svg>
+                        Previous
+                    </a>
+                    <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+                    <a style="text-align: right;" href="../day11/index.html">
+                        Next
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                    </a>
                 </div>
+            </div>
+            </div>
                 </div>
             </section>
             <hr class="m-0" />

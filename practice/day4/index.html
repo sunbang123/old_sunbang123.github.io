@@ -51,7 +51,7 @@
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h3 class="mb-5">실습 보고서</h3>
+                    <h3 class="mb-4">브래드보드</h3>
                     <div id="bread-board" class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <div class="card-group">
@@ -96,16 +96,6 @@
                             <h3 class="mb-5">실습 : ESP32 LED 2개 Blink(점멸) 실험</h3>
                             <div class="card-group">
                                 <div class="card">
-                                  <div class="card-body">
-                                    <p class="card-text">
-                                        <h5>사용된 함수</h5>
-                                        <p class="pt-1">- pinMode(): led1과 led2 핀을 출력 모드로 설정</p>
-                                        <p class="pt-1">- digitalWrite(): led1 핀을 HIGH(켜짐)으로 설정하고 led2 핀을 LOW(꺼짐)으로 설정</p>
-                                        <p class="pt-1">- delay(1000) : 1초 지연</p>            
-                                    </p>
-                                  </div>
-                                </div>
-                                <div class="card">
                                     <div class="card-body">
                                       <p class="card-text">
                                         <h4 class="mb-3">회로도</h4>
@@ -113,7 +103,8 @@
                                       </p>
                                     </div>
                                   </div>
-                                  <div class="card">
+
+                                <div class="card">
                                     <p class="card-text">
                                         <div class="card-body">
                                             <h5>코드</h5>
@@ -139,8 +130,18 @@
                                     </pre>        
                                 </p>
                                 </div>
+                                </div>
+                                <div class="card">
+                                  <div class="card-body">
+                                    <p class="card-text">
+                                        <h5>사용된 함수</h5>
+                                        <p class="pt-1">- pinMode(): led1과 led2 핀을 출력 모드로 설정</p>
+                                        <p class="pt-1">- digitalWrite(): led1 핀을 HIGH(켜짐)으로 설정하고 led2 핀을 LOW(꺼짐)으로 설정</p>
+                                        <p class="pt-1">- delay(1000) : 1초 지연</p>            
+                                    </p>
+                                  </div>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                     <div id="result" class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -214,6 +215,31 @@
                             </ol>
                         </div>
                     </div>
+                    <hr class="mb-5">
+                    <div id="End" class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h4 class="mb-3">실습을 통해 느낀점</h4>
+                            <p>- LED 2개 Blink 프로젝트를 진행하면서, 전기회로의 기본 원리와 옴의 법칙에 대해 배움.</p>
+                            <p>- 특히, 저항이 클수록 전압은 낮아지고 전류는 적게 흐르고, 저항이 작을수록 전압은 높아지고 전류는 많이 흐르는 것을 확인할 수 있었음.</p>
+                            <p>- 이를 통해 전기회로 설계에서는 적절한 저항 값을 선택하는 것이 중요하다는 것을 깨달았음.</p>
+                        </div>
+                    </div>
+
+                    <hr class="mb-3">
+                    <a style="text-align: left;" href="../day3/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                          </svg>
+                        Previous
+                    </a>
+                    <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+                    <a style="text-align: right;" href="../day5.1/index.html">
+                        Next
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                    </a>
+
                 </div>
                 </div>
             </section>
